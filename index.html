@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pydantic AI - Investigación</title>
+    <title>Pydantic AI - Research Overview</title>
     <style>
         :root {
             --bg: #0f1117;
@@ -151,70 +151,70 @@
 
 <div class="hero">
     <h1>Pydantic AI</h1>
-    <p class="subtitle">Framework de agentes AI para Python, construido por el equipo de Pydantic. Trae la experiencia de FastAPI al desarrollo con IA generativa.</p>
+    <p class="subtitle">A Python agent framework built by the Pydantic team. Bringing the FastAPI experience to GenAI app and agent development.</p>
     <span class="badge">16.5k+ GitHub Stars</span>
-    <span class="badge">v1.85.1 — Abril 2026</span>
+    <span class="badge">v1.85.1 — April 2026</span>
 </div>
 
 <div class="container">
 
-<!-- QUÉ ES -->
-<h2>¿Qué es Pydantic AI?</h2>
+<!-- WHAT IS -->
+<h2>What is Pydantic AI?</h2>
 <p>
-    Pydantic AI es un framework de Python para construir <strong>agentes y aplicaciones de IA generativa</strong> con tipo seguro (type-safe) desde la base. Fue creado por el mismo equipo detrás de <strong>Pydantic</strong> y <strong>FastAPI</strong>, dos de las librerías más usadas en el ecosistema Python.
+    Pydantic AI is a Python framework for building <strong>agents and generative AI applications</strong> with type safety built in from the ground up. It was created by the same team behind <strong>Pydantic</strong> and <strong>FastAPI</strong>, two of the most widely used libraries in the Python ecosystem.
 </p>
 <p>
-    La idea central: así como FastAPI revolucionó el desarrollo web con validación automática y type hints, Pydantic AI hace lo mismo para agentes de IA — <em>outputs estructurados, validados y predecibles</em>.
+    The core idea: just as FastAPI revolutionized web development with automatic validation and type hints, Pydantic AI does the same for AI agents — <em>structured, validated, and predictable outputs</em>.
 </p>
 <p>
-    A diferencia de otros frameworks que tratan las respuestas de LLMs como texto no estructurado, Pydantic AI <strong>garantiza que el output cumple exactamente con el schema que definiste</em></strong>. Si el LLM falla, el framework automáticamente le pide que corrija.
+    Unlike other frameworks that treat LLM responses as unstructured text, Pydantic AI <strong>guarantees that the output matches exactly the schema you define</strong>. If the LLM fails to produce valid output, the framework automatically prompts it to try again.
 </p>
 
 <div class="card">
-    <h3>¿Por qué importa?</h3>
-    <p>Pydantic Validation ya es la capa de validación detrás de: OpenAI SDK, Google ADK, Anthropic SDK, LangChain, LlamaIndex, CrewAI, AutoGPT, y muchos más. Pydantic AI va directo a la fuente.</p>
+    <h3>Why it matters</h3>
+    <p>Pydantic Validation is already the validation layer behind: OpenAI SDK, Google ADK, Anthropic SDK, LangChain, LlamaIndex, CrewAI, AutoGPT, and many more. Pydantic AI goes straight to the source.</p>
 </div>
 
-<!-- CARACTERÍSTICAS -->
-<h2>Características Principales</h2>
+<!-- FEATURES -->
+<h2>Core Features</h2>
 
 <div class="card-grid">
     <div class="card">
-        <h3>Type-Safe por diseño</h3>
-        <p>Cada parámetro, retorno y output de LLM es validado automáticamente. Errores se detectan al escribir, no al ejecutar.</p>
+        <h3>Type-Safe by Design</h3>
+        <p>Every parameter, return value, and LLM output is automatically validated. Errors are caught at write-time, not runtime.</p>
     </div>
     <div class="card">
         <h3>Model-Agnostic</h3>
-        <p>OpenAI, Anthropic, Gemini, DeepSeek, Grok, Mistral, Ollama, Bedrock, Groq, y más. Cambia de modelo sin cambiar código.</p>
+        <p>OpenAI, Anthropic, Gemini, DeepSeek, Grok, Mistral, Ollama, Bedrock, Groq, and more. Swap models without changing code.</p>
     </div>
     <div class="card">
         <h3>Dependency Injection</h3>
-        <p>Pasa DB connections, API keys y lógica custom de forma type-safe. Testing y mocking trivial.</p>
+        <p>Pass DB connections, API keys, and custom logic in a type-safe way. Testing and mocking becomes trivial.</p>
     </div>
     <div class="card">
-        <h3>Streaming nativo</h3>
-        <p>Output estructurado en tiempo real con Server-Sent Events. Validación continua mientras se genera.</p>
+        <h3>Native Streaming</h3>
+        <p>Structured real-time output with Server-Sent Events. Continuous validation as data is generated.</p>
     </div>
     <div class="card">
         <h3>Tools & Capabilities</h3>
-        <p>Registra funciones como tools con decoradores. Capabilities componibles: web search, thinking, MCP.</p>
+        <p>Register functions as tools with decorators. Composable capabilities: web search, thinking, MCP.</p>
     </div>
     <div class="card">
         <h3>Durable Execution</h3>
-        <p>Agentes que sobreviven fallos de API, restarts y workflows largos asíncronos.</p>
+        <p>Agents that survive API failures, restarts, and long-running async workflows with production-grade reliability.</p>
     </div>
     <div class="card">
         <h3>Graph Support</h3>
-        <p>Define workflows complejos como grafos con type hints. Evita spaghetti code en multi-step.</p>
+        <p>Define complex multi-step workflows as graphs with type hints. Avoids spaghetti code in branching logic.</p>
     </div>
     <div class="card">
-        <h3>Observabilidad</h3>
-        <p>Integración nativa con Pydantic Logfire (OpenTelemetry). Debug, traces, cost tracking en tiempo real.</p>
+        <h3>Observability</h3>
+        <p>Native integration with Pydantic Logfire (OpenTelemetry). Real-time debugging, traces, and cost tracking.</p>
     </div>
 </div>
 
-<!-- MODELOS SOPORTADOS -->
-<h2>Modelos y Proveedores Soportados</h2>
+<!-- SUPPORTED MODELS -->
+<h2>Supported Models & Providers</h2>
 <div class="card">
     <p>
         <span class="tag">OpenAI</span>
@@ -238,13 +238,13 @@
         <span class="tag">LiteLLM</span>
         <span class="tag">SambaNova</span>
     </p>
-    <p style="margin-top:0.5rem; font-size:0.85rem; color: var(--text-muted);">+ Custom model adapter si tu proveedor no está en la lista.</p>
+    <p style="margin-top:0.5rem; font-size:0.85rem; color: var(--text-muted);">+ Custom model adapter if your provider isn't listed.</p>
 </div>
 
-<!-- EJEMPLOS DE CÓDIGO -->
-<h2>Ejemplos de Código</h2>
+<!-- CODE EXAMPLES -->
+<h2>Code Examples</h2>
 
-<h3>1. Agente mínimo</h3>
+<h3>1. Minimal Agent</h3>
 <pre><code><span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
 
 agent = Agent(
@@ -257,7 +257,7 @@ result = agent.run_sync(<span class="string">'Where does "hello world" come from
 <span class="comment"># → The first known use of "hello, world" was in a 1974</span>
 <span class="comment">#   textbook about the C programming language.</span></code></pre>
 
-<h3>2. Agente con Tools y Dependency Injection</h3>
+<h3>2. Agent with Tools & Dependency Injection</h3>
 <pre><code><span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass
 <span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent, RunContext
 
@@ -288,7 +288,7 @@ result = <span class="keyword">await</span> support_agent.run(
     deps=SupportDependencies(customer_id=123, db=db),
 )</code></pre>
 
-<h3>3. Agente con Capabilities (Thinking + Web Search)</h3>
+<h3>3. Agent with Capabilities (Thinking + Web Search)</h3>
 <pre><code><span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
 <span class="keyword">from</span> pydantic_ai.capabilities <span class="keyword">import</span> Thinking, WebSearch
 
@@ -303,7 +303,7 @@ result = agent.run_sync(
 )
 <span class="func">print</span>(result.output)</code></pre>
 
-<h3>4. Output estructurado con Pydantic Model</h3>
+<h3>4. Structured Output with Pydantic Model</h3>
 <pre><code><span class="keyword">from</span> pydantic <span class="keyword">import</span> BaseModel
 <span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
 
@@ -322,38 +322,38 @@ result = agent.run_sync(<span class="string">'Where is the Eiffel Tower?'</span>
 <span class="func">print</span>(result.output)
 <span class="comment"># → CityLocation(city='Paris', country='France', continent='Europe')</span></code></pre>
 
-<!-- CASOS DE USO -->
-<h2>Casos de Uso Reales</h2>
+<!-- USE CASES -->
+<h2>Real-World Use Cases</h2>
 
 <div class="card-grid">
     <div class="card">
         <h3>Customer Support</h3>
-        <p>Agentes de soporte con acceso a DB, CRM y herramientas. DI permite testing fácil con datos mock.</p>
+        <p>Support agents with DB, CRM, and tool access. DI makes testing easy with mock data.</p>
     </div>
     <div class="card">
-        <h3>RAG & Búsqueda</h3>
-        <p>Agentes con web search integrado y retrieval. Output estructurado garantiza formato consistente.</p>
+        <h3>RAG & Search</h3>
+        <p>Agents with integrated web search and retrieval. Structured output ensures consistent format.</p>
     </div>
     <div class="card">
-        <h3>Automatización IT</h3>
-        <p>Workflows multi-paso (onboarding, approvals). Graph support para flujos complejos con branches.</p>
+        <h3>IT Automation</h3>
+        <p>Multi-step workflows (onboarding, approvals). Graph support for complex branching flows.</p>
     </div>
     <div class="card">
-        <h3>Análisis de Datos</h3>
-        <p>Agentes que consultan DBs, generan reports estructurados. Type safety evita outputs rotos.</p>
+        <h3>Data Analysis</h3>
+        <p>Agents that query databases and generate structured reports. Type safety prevents broken outputs.</p>
     </div>
     <div class="card">
         <h3>Code Generation</h3>
-        <p>Agentes que generan, validan y ejecutan código. Human-in-the-loop para operaciones sensibles.</p>
+        <p>Agents that generate, validate, and execute code. Human-in-the-loop for sensitive operations.</p>
     </div>
     <div class="card">
         <h3>Document Processing</h3>
-        <p>Extracción estructurada de documentos. Pydantic models garantizan que los campos están presentes.</p>
+        <p>Structured extraction from documents. Pydantic models guarantee required fields are present.</p>
     </div>
 </div>
 
-<!-- COMPARACIÓN -->
-<h2>Comparación con Otros Frameworks</h2>
+<!-- COMPARISON -->
+<h2>Comparison with Other Frameworks</h2>
 
 <table class="vs-table">
     <tr>
@@ -364,120 +364,120 @@ result = agent.run_sync(<span class="string">'Where is the Eiffel Tower?'</span>
     </tr>
     <tr>
         <td>Type Safety</td>
-        <td>✅ Nativo, desde la base</td>
-        <td>⚠️ Parcial</td>
-        <td>❌ Limitado</td>
+        <td>✅ Native, from the ground up</td>
+        <td>⚠️ Partial</td>
+        <td>❌ Limited</td>
     </tr>
     <tr>
-        <td>Output Validado</td>
+        <td>Validated Output</td>
         <td>✅ Pydantic models + auto-retry</td>
-        <td>⚠️ Con parsers extra</td>
-        <td>⚠️ Básico</td>
+        <td>⚠️ With extra parsers</td>
+        <td>⚠️ Basic</td>
     </tr>
     <tr>
         <td>Dependency Injection</td>
         <td>✅ Built-in, type-safe</td>
-        <td>❌ No nativo</td>
-        <td>❌ No nativo</td>
+        <td>❌ Not native</td>
+        <td>❌ Not native</td>
     </tr>
     <tr>
         <td>Model Agnostic</td>
         <td>✅ 20+ providers</td>
-        <td>✅ Amplio</td>
-        <td>⚠️ Más limitado</td>
+        <td>✅ Broad</td>
+        <td>⚠️ More limited</td>
     </tr>
     <tr>
-        <td>Observabilidad</td>
-        <td>✅ Logfire / OTel nativo</td>
+        <td>Observability</td>
+        <td>✅ Logfire / native OTel</td>
         <td>⚠️ LangSmith (vendor lock)</td>
-        <td>❌ Limitado</td>
+        <td>❌ Limited</td>
     </tr>
     <tr>
         <td>Durable Execution</td>
         <td>✅ Built-in</td>
-        <td>⚠️ Con LangGraph Cloud</td>
+        <td>⚠️ With LangGraph Cloud</td>
         <td>❌ No</td>
     </tr>
     <tr>
         <td>Graph Workflows</td>
         <td>✅ Type-safe graphs</td>
         <td>✅ LangGraph</td>
-        <td>⚠️ Básico</td>
+        <td>⚠️ Basic</td>
     </tr>
     <tr>
         <td>Learning Curve</td>
-        <td>✅ Baja (si conoces Pydantic)</td>
-        <td>⚠️ Media-Alta</td>
-        <td>✅ Baja</td>
+        <td>✅ Low (if you know Pydantic)</td>
+        <td>⚠️ Medium-High</td>
+        <td>✅ Low</td>
     </tr>
     <tr>
         <td>MCP Support</td>
-        <td>✅ Nativo</td>
-        <td>⚠️ En progreso</td>
+        <td>✅ Native</td>
+        <td>⚠️ In progress</td>
         <td>❌ No</td>
     </tr>
 </table>
 
-<!-- INTEGRACIONES -->
-<h2>Integraciones y Ecosistema</h2>
+<!-- INTEGRATIONS -->
+<h2>Integrations & Ecosystem</h2>
 
 <h3>MCP (Model Context Protocol)</h3>
-<p>Integración nativa para conectar agentes con herramientas y datos externos vía MCP servers.</p>
+<p>Native integration to connect agents with external tools and data via MCP servers.</p>
 
 <h3>A2A (Agent-to-Agent)</h3>
-<p>Comunicación entre agentes con el protocolo Agent2Agent de Google.</p>
+<p>Inter-agent communication using Google's Agent2Agent protocol.</p>
 
 <h3>Pydantic Logfire</h3>
-<p>Observabilidad completa: traces, debugging en tiempo real, cost tracking, performance monitoring. Basado en OpenTelemetry.</p>
+<p>Full observability: traces, real-time debugging, cost tracking, performance monitoring. Built on OpenTelemetry.</p>
 
 <h3>Pydantic Evals</h3>
-<p>Sistema de evaluación para medir precisión y performance de agentes. Integrado con Logfire para monitoreo continuo.</p>
+<p>Evaluation system for measuring agent accuracy and performance. Integrated with Logfire for continuous monitoring.</p>
 
 <h3>Agent Spec (YAML/JSON)</h3>
-<p>Define agentes completamente en YAML o JSON — sin código. Útil para configuración declarativa.</p>
+<p>Define agents entirely in YAML or JSON — no code required. Useful for declarative configuration.</p>
 
-<!-- CUÁNDO USAR -->
-<h2>¿Cuándo usar Pydantic AI?</h2>
+<!-- WHEN TO USE -->
+<h2>When to Use Pydantic AI</h2>
 
 <div class="card">
-    <h3>✅ Ideal para:</h3>
+    <h3>✅ Great for:</h3>
     <ul>
-        <li>Aplicaciones de producción que necesitan <strong>outputs confiables y validados</strong></li>
-        <li>Agentes con <strong>tools complejas</strong> y acceso a datos externos</li>
-        <li>Workflows multi-paso con <strong>lógica condicional</strong></li>
-        <li>Equipos que valoran <strong>type safety</strong> y testing robusto</li>
-        <li>Sistemas que necesitan <strong>observabilidad</strong> y cost tracking</li>
-        <li>Proyectos que ya usan <strong>Pydantic/FastAPI</strong> en su stack</li>
+        <li>Production applications that need <strong>reliable, validated outputs</strong></li>
+        <li>Agents with <strong>complex tools</strong> and external data access</li>
+        <li>Multi-step workflows with <strong>conditional logic</strong></li>
+        <li>Teams that value <strong>type safety</strong> and robust testing</li>
+        <li>Systems requiring <strong>observability</strong> and cost tracking</li>
+        <li>Projects already using <strong>Pydantic/FastAPI</strong> in their stack</li>
     </ul>
 </div>
 
 <div class="card">
-    <h3>⚠️ Quizás no para:</h3>
+    <h3>⚠️ Maybe not for:</h3>
     <ul>
-        <li>Prototipos rápidos donde la validación no importa</li>
-        <li>Proyectos en otros lenguajes (es Python-only)</li>
-        <li>Casos simples de "prompt + response" sin tools</li>
+        <li>Quick prototypes where validation doesn't matter</li>
+        <li>Projects in other languages (Python-only)</li>
+        <li>Simple "prompt + response" cases without tools</li>
     </ul>
 </div>
 
 <!-- QUICK START -->
 <h2>Quick Start</h2>
 
-<pre><code><span class="comment"># Instalar</span>
+<pre><code><span class="comment"># Install</span>
 pip install pydantic-ai
 
-<span class="comment"># Con extras (todos los providers)</span>
+<span class="comment"># With all provider extras</span>
 pip install pydantic-ai[all-extras]
 
-<span class="comment"># O con uv</span>
+<span class="comment"># Or with uv</span>
 uv add pydantic-ai</code></pre>
 
-<pre><code><span class="comment"># Variables de entorno necesarias</span>
+<pre><code><span class="comment"># Required environment variables</span>
 <span class="keyword">export</span> OPENAI_API_KEY=<span class="string">"sk-..."</span>
 <span class="keyword">export</span> ANTHROPIC_API_KEY=<span class="string">"sk-ant-..."</span>
 <span class="keyword">export</span> GOOGLE_API_KEY=<span class="string">"..."</span>
 
-<span class="comment"># ¡Listo! Ya podés crear tu primer agente</span>
+<span class="comment"># Ready! Create your first agent</span>
 <span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
 
 agent = Agent(<span class="string">'openai:gpt-4o'</span>)
@@ -487,18 +487,18 @@ result = agent.run_sync(<span class="string">'Hello!'</span>)
 <!-- LINKS -->
 <h2>Links</h2>
 <ul>
-    <li><strong>Documentación oficial:</strong> <a href="https://ai.pydantic.dev/" style="color:var(--accent)">ai.pydantic.dev</a></li>
+    <li><strong>Official Docs:</strong> <a href="https://ai.pydantic.dev/" style="color:var(--accent)">ai.pydantic.dev</a></li>
     <li><strong>GitHub:</strong> <a href="https://github.com/pydantic/pydantic-ai" style="color:var(--accent)">github.com/pydantic/pydantic-ai</a></li>
     <li><strong>PyPI:</strong> <a href="https://pypi.org/project/pydantic-ai/" style="color:var(--accent)">pypi.org/project/pydantic-ai</a></li>
-    <li><strong>Logfire (Observabilidad):</strong> <a href="https://pydantic.dev/logfire" style="color:var(--accent)">pydantic.dev/logfire</a></li>
-    <li><strong>Ejemplos prácticos:</strong> <a href="https://github.com/cloutprotocol/pydantic-ai" style="color:var(--accent)">github.com/cloutprotocol/pydantic-ai</a></li>
+    <li><strong>Logfire (Observability):</strong> <a href="https://pydantic.dev/logfire" style="color:var(--accent)">pydantic.dev/logfire</a></li>
+    <li><strong>Practical Examples:</strong> <a href="https://github.com/cloutprotocol/pydantic-ai" style="color:var(--accent)">github.com/cloutprotocol/pydantic-ai</a></li>
 </ul>
 
 </div>
 
 <div class="footer">
-    <p>Investigación generada el 1 de junio de 2026</p>
-    <p style="margin-top:0.5rem;">Fuentes: ai.pydantic.dev, github.com/pydantic/pydantic-ai, decisioncrafters.com, datacamp.com, deepwiki.com</p>
+    <p>Research compiled on June 1, 2026</p>
+    <p style="margin-top:0.5rem;">Sources: ai.pydantic.dev, github.com/pydantic/pydantic-ai, decisioncrafters.com, datacamp.com, deepwiki.com</p>
 </div>
 
 </body>
