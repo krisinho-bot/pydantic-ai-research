@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pydantic AI - Investigación</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --card: #1a1d2e;
+            --border: #2a2d3e;
+            --text: #e4e4e7;
+            --text-muted: #9ca3af;
+            --accent: #e94560;
+            --accent2: #6c63ff;
+            --code-bg: #151722;
+            --green: #4ade80;
+            --yellow: #fbbf24;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1d2e 0%, #0f1117 50%, #1a1025 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .hero .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h2 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h3 {
+            color: var(--accent2);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        p { margin-bottom: 1rem; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .card-grid .card { margin: 0; }
+        .card h3 { margin-top: 0; }
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            color: var(--green);
+        }
+        pre code { color: var(--text); }
+        .keyword { color: var(--accent2); }
+        .string { color: var(--green); }
+        .comment { color: var(--text-muted); font-style: italic; }
+        .func { color: var(--yellow); }
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li { margin-bottom: 0.4rem; }
+        .tag {
+            display: inline-block;
+            background: var(--accent2);
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 0.3rem;
+        }
+        .vs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .vs-table th, .vs-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+        .vs-table th {
+            background: var(--card);
+            color: var(--accent);
+        }
+        .vs-table tr:hover { background: var(--card); }
+        .footer {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Pydantic AI</h1>
+    <p class="subtitle">Framework de agentes AI para Python, construido por el equipo de Pydantic. Trae la experiencia de FastAPI al desarrollo con IA generativa.</p>
+    <span class="badge">16.5k+ GitHub Stars</span>
+    <span class="badge">v1.85.1 — Abril 2026</span>
+</div>
+
+<div class="container">
+
+<!-- QUÉ ES -->
+<h2>¿Qué es Pydantic AI?</h2>
+<p>
+    Pydantic AI es un framework de Python para construir <strong>agentes y aplicaciones de IA generativa</strong> con tipo seguro (type-safe) desde la base. Fue creado por el mismo equipo detrás de <strong>Pydantic</strong> y <strong>FastAPI</strong>, dos de las librerías más usadas en el ecosistema Python.
+</p>
+<p>
+    La idea central: así como FastAPI revolucionó el desarrollo web con validación automática y type hints, Pydantic AI hace lo mismo para agentes de IA — <em>outputs estructurados, validados y predecibles</em>.
+</p>
+<p>
+    A diferencia de otros frameworks que tratan las respuestas de LLMs como texto no estructurado, Pydantic AI <strong>garantiza que el output cumple exactamente con el schema que definiste</em></strong>. Si el LLM falla, el framework automáticamente le pide que corrija.
+</p>
+
+<div class="card">
+    <h3>¿Por qué importa?</h3>
+    <p>Pydantic Validation ya es la capa de validación detrás de: OpenAI SDK, Google ADK, Anthropic SDK, LangChain, LlamaIndex, CrewAI, AutoGPT, y muchos más. Pydantic AI va directo a la fuente.</p>
+</div>
+
+<!-- CARACTERÍSTICAS -->
+<h2>Características Principales</h2>
+
+<div class="card-grid">
+    <div class="card">
+        <h3>Type-Safe por diseño</h3>
+        <p>Cada parámetro, retorno y output de LLM es validado automáticamente. Errores se detectan al escribir, no al ejecutar.</p>
+    </div>
+    <div class="card">
+        <h3>Model-Agnostic</h3>
+        <p>OpenAI, Anthropic, Gemini, DeepSeek, Grok, Mistral, Ollama, Bedrock, Groq, y más. Cambia de modelo sin cambiar código.</p>
+    </div>
+    <div class="card">
+        <h3>Dependency Injection</h3>
+        <p>Pasa DB connections, API keys y lógica custom de forma type-safe. Testing y mocking trivial.</p>
+    </div>
+    <div class="card">
+        <h3>Streaming nativo</h3>
+        <p>Output estructurado en tiempo real con Server-Sent Events. Validación continua mientras se genera.</p>
+    </div>
+    <div class="card">
+        <h3>Tools & Capabilities</h3>
+        <p>Registra funciones como tools con decoradores. Capabilities componibles: web search, thinking, MCP.</p>
+    </div>
+    <div class="card">
+        <h3>Durable Execution</h3>
+        <p>Agentes que sobreviven fallos de API, restarts y workflows largos asíncronos.</p>
+    </div>
+    <div class="card">
+        <h3>Graph Support</h3>
+        <p>Define workflows complejos como grafos con type hints. Evita spaghetti code en multi-step.</p>
+    </div>
+    <div class="card">
+        <h3>Observabilidad</h3>
+        <p>Integración nativa con Pydantic Logfire (OpenTelemetry). Debug, traces, cost tracking en tiempo real.</p>
+    </div>
+</div>
+
+<!-- MODELOS SOPORTADOS -->
+<h2>Modelos y Proveedores Soportados</h2>
+<div class="card">
+    <p>
+        <span class="tag">OpenAI</span>
+        <span class="tag">Anthropic</span>
+        <span class="tag">Gemini</span>
+        <span class="tag">DeepSeek</span>
+        <span class="tag">Grok/xAI</span>
+        <span class="tag">Cohere</span>
+        <span class="tag">Mistral</span>
+        <span class="tag">Perplexity</span>
+        <span class="tag">Ollama</span>
+        <span class="tag">Groq</span>
+        <span class="tag">Azure AI</span>
+        <span class="tag">Amazon Bedrock</span>
+        <span class="tag">Google Vertex</span>
+        <span class="tag">OpenRouter</span>
+        <span class="tag">Together AI</span>
+        <span class="tag">Fireworks AI</span>
+        <span class="tag">Cerebras</span>
+        <span class="tag">Hugging Face</span>
+        <span class="tag">LiteLLM</span>
+        <span class="tag">SambaNova</span>
+    </p>
+    <p style="margin-top:0.5rem; font-size:0.85rem; color: var(--text-muted);">+ Custom model adapter si tu proveedor no está en la lista.</p>
+</div>
+
+<!-- EJEMPLOS DE CÓDIGO -->
+<h2>Ejemplos de Código</h2>
+
+<h3>1. Agente mínimo</h3>
+<pre><code><span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
+
+agent = Agent(
+    <span class="string">'anthropic:claude-sonnet-4-6'</span>,
+    instructions=<span class="string">'Be concise, reply with one sentence.'</span>,
+)
+
+result = agent.run_sync(<span class="string">'Where does "hello world" come from?'</span>)
+<span class="func">print</span>(result.output)
+<span class="comment"># → The first known use of "hello, world" was in a 1974</span>
+<span class="comment">#   textbook about the C programming language.</span></code></pre>
+
+<h3>2. Agente con Tools y Dependency Injection</h3>
+<pre><code><span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass
+<span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent, RunContext
+
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> <span class="func">DatabaseConn</span>:
+    <span class="comment"># Simulated DB connection</span>
+    <span class="keyword">async def</span> <span class="func">customer_name</span>(self, *, id: int) -> str:
+        ...
+
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> <span class="func">SupportDependencies</span>:
+    customer_id: int
+    db: DatabaseConn
+
+support_agent = Agent(
+    <span class="string">'openai:gpt-4o'</span>,
+    deps_type=SupportDependencies,
+    instructions=<span class="string">'You are a bank support agent.'</span>,
+)
+
+<span class="keyword">@support_agent.tool</span>
+<span class="keyword">async def</span> <span class="func">customer_name</span>(ctx: RunContext[SupportDependencies]) -> str:
+    name = <span class="keyword">await</span> ctx.deps.db.customer_name(id=ctx.deps.customer_id)
+    <span class="keyword">return</span> f<span class="string">"The customer's name is {name!r}"</span>
+
+result = <span class="keyword">await</span> support_agent.run(
+    <span class="string">'What is my balance?'</span>,
+    deps=SupportDependencies(customer_id=123, db=db),
+)</code></pre>
+
+<h3>3. Agente con Capabilities (Thinking + Web Search)</h3>
+<pre><code><span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
+<span class="keyword">from</span> pydantic_ai.capabilities <span class="keyword">import</span> Thinking, WebSearch
+
+agent = Agent(
+    <span class="string">'anthropic:claude-sonnet-4-6'</span>,
+    instructions=<span class="string">'Be concise, reply with one sentence.'</span>,
+    capabilities=[Thinking(), WebSearch()],
+)
+
+result = agent.run_sync(
+    <span class="string">'What was the mass of the largest meteorite found this year?'</span>
+)
+<span class="func">print</span>(result.output)</code></pre>
+
+<h3>4. Output estructurado con Pydantic Model</h3>
+<pre><code><span class="keyword">from</span> pydantic <span class="keyword">import</span> BaseModel
+<span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
+
+<span class="keyword">class</span> <span class="func">CityLocation</span>(BaseModel):
+    city: str
+    country: str
+    continent: str
+
+agent = Agent(
+    <span class="string">'gemini-2.0-flash'</span>,
+    result_type=CityLocation,
+    instructions=<span class="string">'Return city info.'</span>,
+)
+
+result = agent.run_sync(<span class="string">'Where is the Eiffel Tower?'</span>)
+<span class="func">print</span>(result.output)
+<span class="comment"># → CityLocation(city='Paris', country='France', continent='Europe')</span></code></pre>
+
+<!-- CASOS DE USO -->
+<h2>Casos de Uso Reales</h2>
+
+<div class="card-grid">
+    <div class="card">
+        <h3>Customer Support</h3>
+        <p>Agentes de soporte con acceso a DB, CRM y herramientas. DI permite testing fácil con datos mock.</p>
+    </div>
+    <div class="card">
+        <h3>RAG & Búsqueda</h3>
+        <p>Agentes con web search integrado y retrieval. Output estructurado garantiza formato consistente.</p>
+    </div>
+    <div class="card">
+        <h3>Automatización IT</h3>
+        <p>Workflows multi-paso (onboarding, approvals). Graph support para flujos complejos con branches.</p>
+    </div>
+    <div class="card">
+        <h3>Análisis de Datos</h3>
+        <p>Agentes que consultan DBs, generan reports estructurados. Type safety evita outputs rotos.</p>
+    </div>
+    <div class="card">
+        <h3>Code Generation</h3>
+        <p>Agentes que generan, validan y ejecutan código. Human-in-the-loop para operaciones sensibles.</p>
+    </div>
+    <div class="card">
+        <h3>Document Processing</h3>
+        <p>Extracción estructurada de documentos. Pydantic models garantizan que los campos están presentes.</p>
+    </div>
+</div>
+
+<!-- COMPARACIÓN -->
+<h2>Comparación con Otros Frameworks</h2>
+
+<table class="vs-table">
+    <tr>
+        <th>Feature</th>
+        <th>Pydantic AI</th>
+        <th>LangChain/LangGraph</th>
+        <th>CrewAI</th>
+    </tr>
+    <tr>
+        <td>Type Safety</td>
+        <td>✅ Nativo, desde la base</td>
+        <td>⚠️ Parcial</td>
+        <td>❌ Limitado</td>
+    </tr>
+    <tr>
+        <td>Output Validado</td>
+        <td>✅ Pydantic models + auto-retry</td>
+        <td>⚠️ Con parsers extra</td>
+        <td>⚠️ Básico</td>
+    </tr>
+    <tr>
+        <td>Dependency Injection</td>
+        <td>✅ Built-in, type-safe</td>
+        <td>❌ No nativo</td>
+        <td>❌ No nativo</td>
+    </tr>
+    <tr>
+        <td>Model Agnostic</td>
+        <td>✅ 20+ providers</td>
+        <td>✅ Amplio</td>
+        <td>⚠️ Más limitado</td>
+    </tr>
+    <tr>
+        <td>Observabilidad</td>
+        <td>✅ Logfire / OTel nativo</td>
+        <td>⚠️ LangSmith (vendor lock)</td>
+        <td>❌ Limitado</td>
+    </tr>
+    <tr>
+        <td>Durable Execution</td>
+        <td>✅ Built-in</td>
+        <td>⚠️ Con LangGraph Cloud</td>
+        <td>❌ No</td>
+    </tr>
+    <tr>
+        <td>Graph Workflows</td>
+        <td>✅ Type-safe graphs</td>
+        <td>✅ LangGraph</td>
+        <td>⚠️ Básico</td>
+    </tr>
+    <tr>
+        <td>Learning Curve</td>
+        <td>✅ Baja (si conoces Pydantic)</td>
+        <td>⚠️ Media-Alta</td>
+        <td>✅ Baja</td>
+    </tr>
+    <tr>
+        <td>MCP Support</td>
+        <td>✅ Nativo</td>
+        <td>⚠️ En progreso</td>
+        <td>❌ No</td>
+    </tr>
+</table>
+
+<!-- INTEGRACIONES -->
+<h2>Integraciones y Ecosistema</h2>
+
+<h3>MCP (Model Context Protocol)</h3>
+<p>Integración nativa para conectar agentes con herramientas y datos externos vía MCP servers.</p>
+
+<h3>A2A (Agent-to-Agent)</h3>
+<p>Comunicación entre agentes con el protocolo Agent2Agent de Google.</p>
+
+<h3>Pydantic Logfire</h3>
+<p>Observabilidad completa: traces, debugging en tiempo real, cost tracking, performance monitoring. Basado en OpenTelemetry.</p>
+
+<h3>Pydantic Evals</h3>
+<p>Sistema de evaluación para medir precisión y performance de agentes. Integrado con Logfire para monitoreo continuo.</p>
+
+<h3>Agent Spec (YAML/JSON)</h3>
+<p>Define agentes completamente en YAML o JSON — sin código. Útil para configuración declarativa.</p>
+
+<!-- CUÁNDO USAR -->
+<h2>¿Cuándo usar Pydantic AI?</h2>
+
+<div class="card">
+    <h3>✅ Ideal para:</h3>
+    <ul>
+        <li>Aplicaciones de producción que necesitan <strong>outputs confiables y validados</strong></li>
+        <li>Agentes con <strong>tools complejas</strong> y acceso a datos externos</li>
+        <li>Workflows multi-paso con <strong>lógica condicional</strong></li>
+        <li>Equipos que valoran <strong>type safety</strong> y testing robusto</li>
+        <li>Sistemas que necesitan <strong>observabilidad</strong> y cost tracking</li>
+        <li>Proyectos que ya usan <strong>Pydantic/FastAPI</strong> en su stack</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>⚠️ Quizás no para:</h3>
+    <ul>
+        <li>Prototipos rápidos donde la validación no importa</li>
+        <li>Proyectos en otros lenguajes (es Python-only)</li>
+        <li>Casos simples de "prompt + response" sin tools</li>
+    </ul>
+</div>
+
+<!-- QUICK START -->
+<h2>Quick Start</h2>
+
+<pre><code><span class="comment"># Instalar</span>
+pip install pydantic-ai
+
+<span class="comment"># Con extras (todos los providers)</span>
+pip install pydantic-ai[all-extras]
+
+<span class="comment"># O con uv</span>
+uv add pydantic-ai</code></pre>
+
+<pre><code><span class="comment"># Variables de entorno necesarias</span>
+<span class="keyword">export</span> OPENAI_API_KEY=<span class="string">"sk-..."</span>
+<span class="keyword">export</span> ANTHROPIC_API_KEY=<span class="string">"sk-ant-..."</span>
+<span class="keyword">export</span> GOOGLE_API_KEY=<span class="string">"..."</span>
+
+<span class="comment"># ¡Listo! Ya podés crear tu primer agente</span>
+<span class="keyword">from</span> pydantic_ai <span class="keyword">import</span> Agent
+
+agent = Agent(<span class="string">'openai:gpt-4o'</span>)
+result = agent.run_sync(<span class="string">'Hello!'</span>)
+<span class="func">print</span>(result.output)</code></pre>
+
+<!-- LINKS -->
+<h2>Links</h2>
+<ul>
+    <li><strong>Documentación oficial:</strong> <a href="https://ai.pydantic.dev/" style="color:var(--accent)">ai.pydantic.dev</a></li>
+    <li><strong>GitHub:</strong> <a href="https://github.com/pydantic/pydantic-ai" style="color:var(--accent)">github.com/pydantic/pydantic-ai</a></li>
+    <li><strong>PyPI:</strong> <a href="https://pypi.org/project/pydantic-ai/" style="color:var(--accent)">pypi.org/project/pydantic-ai</a></li>
+    <li><strong>Logfire (Observabilidad):</strong> <a href="https://pydantic.dev/logfire" style="color:var(--accent)">pydantic.dev/logfire</a></li>
+    <li><strong>Ejemplos prácticos:</strong> <a href="https://github.com/cloutprotocol/pydantic-ai" style="color:var(--accent)">github.com/cloutprotocol/pydantic-ai</a></li>
+</ul>
+
+</div>
+
+<div class="footer">
+    <p>Investigación generada el 1 de junio de 2026</p>
+    <p style="margin-top:0.5rem;">Fuentes: ai.pydantic.dev, github.com/pydantic/pydantic-ai, decisioncrafters.com, datacamp.com, deepwiki.com</p>
+</div>
+
+</body>
+</html>
